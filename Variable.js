@@ -19,4 +19,4 @@ document.writeln (age);
 // --> To display "syed" in browser pop-up 
 alert (name)
 confirm ("Your name is Syed ?")
-prompt ("Enter your name: ")
+prompt ("Enter your name:")
