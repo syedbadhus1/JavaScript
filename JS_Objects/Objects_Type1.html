@@ -34,8 +34,23 @@
         banks["name"] = "SBI"
         banks["City"] = "trichy"     
      
-        console.log(banks);
-        document.getElementById("demo").innerHTML = banks["name"];
+        // console.log(banks);
+        // document.getElementById("demo").innerHTML = banks["name"];
+
+ // Printing all the values
+    // for (a in banks){
+    //     // console.log ("a")
+    //     console.log (banks[a])
+    // }
+
+    var results = ""
+    for (a in banks){
+        results=results +banks[a] +"<br>"
+    }
+    document.getElementById("demo").innerHTML = results;
+
+
+
     </script>
 </body>
 </html>
