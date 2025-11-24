@@ -6,15 +6,36 @@
     <title>Object Class</title>
 </head>
 <body>
+    <div id="demo"></div>
     <script>
+        
+// Objects Type 1        
 
-        var employee = {
-            name : "syed" ,
-            age : 45 ,
-            Gender: "Male"
-        }
+        // var employee = {
+        //     name : "syed" ,
+        //     age : 45 ,
+        //     Gender: "Male"
+        // }
 
-        console.log(employee);
+        // console.log(employee);
+
+// Objects Type 2
+
+        // var stores = {};
+        // stores.name = "Zudio"
+        // stores.location = "Chennai"
+        // stores.pin = 610001
+
+        // console.log(stores);
+
+ // Objects Type 3
+
+        var banks = {};
+        banks["name"] = "SBI"
+        banks["City"] = "trichy"     
+     
+        console.log(banks);
+        document.getElementById("demo").innerHTML = banks["name"];
     </script>
 </body>
 </html>
