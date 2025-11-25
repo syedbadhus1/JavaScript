@@ -7,25 +7,38 @@
 </head>
 <body>
     <script>
-// Builtin constructor
+// Builtin constructor - Type ==> 2
 
-var batch = new Object ({
-    name: "fahim",
-    age : 14
-})
+// var batch = new Object ({
+//     name: "fahim",
+//     age : 14
+// })
 
-console.log(batch);
+// console.log(batch);
 
-// // Custom Contructor
+//  Custom Contructor - Type ==> 3 
 // function emi (name,amount,tenure){
 //     this.name = name;
 //     this.amount = amount;
-//     this.tenure = tenure
+//     this.tenure = tenure;
 // }
 
+// var applicants = new emi("fahim","12,000","36");
+// console.log(applicants);
 
 
+// Custom CXonstructor ES6 with Class approach - Type ==> 4
 
+class emi {
+    constructor(name,amount,tenure){
+    this.name = name;
+    this.amount = amount;
+    this.tenure = tenure;
+    }
+}
+
+var applicants = new emi ("fahim","12,000","36")
+console.log(applicants);
 
     </script>
 </body>
