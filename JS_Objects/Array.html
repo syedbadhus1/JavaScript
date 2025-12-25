@@ -6,10 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="demo"></div>
+    <div id="display"></div>
     <script>
+        var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
 
-
+        var results="";
+        for (i=0;
+                i<districts.length;
+                    i++){
+            results=results + districts[i] + "<br/>"
+        }
+        document.getElementById("display").innerHTML = results
     </script>
+
 </body>
 </html>
