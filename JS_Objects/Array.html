@@ -10,13 +10,35 @@
     <script>
         var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
 
-        var results="";
-        for (i=0;
-                i<districts.length;
-                    i++){
-            results=results + districts[i] + "<br/>"
-        }
-        document.getElementById("display").innerHTML = results
+        // var results="";
+        // for (i=0;
+        //         i<districts.length;
+        //             i++){
+        //     results=results + districts[i] + "<br/>"
+        // }
+        // document.getElementById("display").innerHTML = results
+
+// ForEach  
+        // var results = "";
+        // districts.forEach(function (val, index, arr){
+        //     console.log(val)
+        //     results += val + "<br/>"
+        //         })
+        // document.getElementById("display").innerHTML = results;
+
+// ForMap
+
+    var newarray = districts.map(function (val){
+        return val + "_mappingword"
+        // console.log (newarray)
+    })
+
+    var results = "";
+    newarray.forEach (function (val){
+        results += val + "<br/>"
+    })
+
+    document.getElementById("display").innerHTML = results
     </script>
 
 </body>
