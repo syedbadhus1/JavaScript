@@ -25,9 +25,26 @@
 // document.getElementById("display").innerHTML = results;
 
 //Every
-var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
-var results = districts.every(function(val){
-    return val.length > 4
+// var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
+// var results = districts.every(function(val){
+//     return val.length > 4
+// })
+// document.getElementById("display").innerHTML = results;
+
+
+
+//Find
+// var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
+// var results = districts.find(function(val){
+//     return val == "Madurai"
+// })
+// document.getElementById("display").innerHTML = results;
+
+
+//Filter
+var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem","Madurai"]
+var results = districts.filter(function(val){
+    return val == "Madurai"
 })
 document.getElementById("display").innerHTML = results;
 
