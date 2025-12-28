@@ -8,13 +8,30 @@
 <body>
     <div id="display"></div>
     <script>
-    
-    var counts = [10,20,30,40,50]
-    var total = counts.reduce(function (a,b){
-        return a + b
-    })
 
-document.getElementById("display").innerHTML = total;
+// Reduce:
+//     var counts = [10,20,30,40,50]
+//     var total = counts.reduce(function (a,b){
+//         return a + b
+//     })
+
+// document.getElementById("display").innerHTML = total;
+
+// Some:
+// var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
+// var results = districts.some(function(val){
+//     return val.length == 4
+// })
+// document.getElementById("display").innerHTML = results;
+
+//Every
+var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
+var results = districts.every(function(val){
+    return val.length > 4
+})
+document.getElementById("display").innerHTML = results;
+
+
 
     </script>
 </body>
