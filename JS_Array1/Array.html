@@ -8,7 +8,7 @@
 <body>
     <div id="display"></div>
     <script>
-        var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
+        // var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
 
         // var results="";
         // for (i=0;
@@ -28,17 +28,36 @@
 
 // ForMap
 
-    var newarray = districts.map(function (val){
-        return val + "_mappingword"
-        // console.log (newarray)
-    })
+    // var newarray = districts.map(function (val){
+    //     return val + "_mappingword"
+    //     // console.log (newarray)
+    // })
 
-    var results = "";
-    newarray.forEach (function (val){
+    // var results = "";
+    // newarray.forEach (function (val){
+    //     results += val + "<br/>"
+    // })
+
+    // document.getElementById("display").innerHTML = results
+
+     var districts = ["Arakonam","Madurai","chennai","trichy","coimbator","salem"]
+
+     var results = "";
+    //  districts.forEach(function (val){
+    //     results = results + val + "<br/>"
+    //  })
+    //  document.getElementById("display").innerHTML = results;
+
+    var newarray = districts.map(function (val){
+        return val + "_Trichy"
+        })
+    
+    newarray.forEach(function(val){
         results += val + "<br/>"
     })
+        document.getElementById("display").innerHTML = results
 
-    document.getElementById("display").innerHTML = results
+
     </script>
     
 
