@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="sayhello()">Click</button>
+    <div id="display"></div>
+    <H2 onmouseover="Colourchange()" onmouseout="revertcolour()">This is the Event Topic Header 2</H2> -->
+
+
+    <form>
+        <label for="firstname">Enter Your Name</label>
+        <input type="text" name="" id="firstname" onkeyup="validateform()">
+
+    </form>
+    <button>OK</button>
+    <script>
+        // function sayhello (){
+        //     console.log ("Click is done")
+        //     document.getElementById("display").innerHTML = "Click is DONE"
+        // }
+
+        // function Colourchange (){
+        //     document.querySelector("h2").style.color = "red"
+        // }
+
+        // function revertcolour (){
+        //     document.querySelector("h2").style.color = ""
+        // }
+
+        // Form Sample
+        function validateform (){
+                var userinput = document.getElementById("firstname").value
+                console.log(userinput)
+                 if (userinput > 8){
+                    document.querySelector("button").removeAttribute("disabled",true)
+        }    
+                        }
+        
+        
+
+
+    </script>
+
+
+
+</body>
+
+</html>
