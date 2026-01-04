@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Welcome to Dom Topic 2</h2>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+
+        // 1. Change the HTML content
+        document.querySelector("h2").innerHTML = "Changed the heading"
+
+        // 2. Change the CSS property
+        document.querySelector("h2").style.color = "red"
+
+        // 3. Adding Attributes
+        document.querySelector("h2").setAttribute("onclick", "colorhandle()")
+        function colorhandle (){
+            document.querySelector("h2").style.color = "green"
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
