@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-      <h2>Welcome to Dom topics</h2>  
-      <h2 id="idheadiing">Welcome to querySelector for ID </h2>  
-<ul>
-    <li>This is first line</li>
-    <li>This is the second line</li>
-    <li>This is the third line</li>
-</ul>
+    <h2>Welcome to Dom topics</h2>
+    <h2 id="idheadiing">Welcome to querySelector for ID </h2>
+    <input type="text" name="getelebyname" id="">
+    <ul>
+        <li>This is first line</li>
+        <li>This is the second line</li>
+        <li>This is the third line</li>
+    </ul>
 
-<ul>
-    <li class="classheading">This is querySelectorAll with Class test line 1</li>
-    <li class="classheading">This is querySelectorAll with Class test line 2</li>
-    <li class="classheading">This is querySelectorAll with Class test line 3</li>
-</ul>
+    <ul>
+        <li class="classheading">This is querySelectorAll with Class test line 1</li>
+        <li class="classheading">This is querySelectorAll with Class test line 2</li>
+        <li class="classheading">This is querySelectorAll with Class test line 3</li>
+    </ul>
 
 
-<script>
-// querySelector
+    <script>
+        // querySelector
 
-    document.querySelector("h2").style.color = "red"
+        document.querySelector("h2").style.color = "red"
 
-// querySelector with ID    
+        // querySelector with ID    
 
-document.querySelector("#idheadiing").style.color = "Orange"
+        document.querySelector("#idheadiing").style.color = "Orange"
 
-// querySelectorAll:  
+        // querySelectorAll:  
 
-    var licolor = document.querySelectorAll("li");
-    for (i=0;i<licolor.length;i++){
-        console.log(i)
-        licolor[i].style.color = "red"
-    }
+        var licolor = document.querySelectorAll("li");
+        for (i = 0; i < licolor.length; i++) {
+            console.log(i)
+            licolor[i].style.color = "red"
+        }
 
-    var Secondtest = document.getElementsByClassName("classheading");
-    for (i=0;i<Secondtest.length;i++){
-        console.log(i)
-        Secondtest[i].style.color = "blue"
-    }
+        // getElementsByClassName
+        var Secondtest = document.getElementsByClassName("classheading");
+        for (i = 0; i < Secondtest.length; i++) {
+            console.log(i)
+            Secondtest[i].style.color = "blue"
+        }
 
-</script>
+        // getElementsByName
+        var getelebyname = document.getElementsByName("getelebyname");
+        for (i = 0; i < Secondtest.length; i++) {
+            console.log(i)
+            Secondtest[i].style.color = "blue"
+        }
+
+    </script>
 </body>
+
 </html>
