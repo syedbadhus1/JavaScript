@@ -26,16 +26,13 @@
 
     <script>
         // querySelector
-
-        document.querySelector("h2").style.color = "red"
+                document.querySelector("h2").style.color = "red"
 
         // querySelector with ID    
-
-        document.querySelector("#idheadiing").style.color = "Orange"
+                document.querySelector("#idheadiing").style.color = "Orange"
 
         // querySelectorAll:  
-
-        var licolor = document.querySelectorAll("li");
+                var licolor = document.querySelectorAll("li");
         for (i = 0; i < licolor.length; i++) {
             console.log(i)
             licolor[i].style.color = "red"
@@ -52,6 +49,13 @@
         var getelebynames = document.getElementsByName("getelebyname");
         getelebynames[0].style.background = "Green"
 
+
+        // getElementsByTagName
+        var getEleTagName = document.getElementsByTagName("h2")
+        for (i = 0; i < getEleTagName.length; i++) {
+            console.log(i)
+            getEleTagName[i].style.color = "Gray"
+        }
 
     </script>
 </body>
