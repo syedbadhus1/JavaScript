@@ -17,11 +17,13 @@
 <body>
     <h2>Welcome to Dom Topic 2</h2>
 
-    <ul>
-        <li>Item 1</li>
+    <!-- <ul> -->
+        <!-- <li>Item 1</li>
         <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
+        <li>Item 3</li> -->
+    <!-- </ul> -->
+
+    <ul></ul>
 
     <script>
 
@@ -38,15 +40,27 @@
         // }
 
         // 4. Add or Remove Elements
-        var listitems = document.querySelectorAll("li");
-        for (i=0; i < listitems.length ; i++) {
-            listitems[i].setAttribute ("class", "success")
-            listitems[i].style.margin = '2px'
-            listitems[i].addEventListener("click", function() {
-                   console.log(this)
-                   this.remove()
-            })
-                    }
+
+        // Add Elements
+        var userinput = prompt("Enter the no of items:")
+        console.log(userinput)
+        for(i=0; i < userinput; i++){
+            var listitems = document.createElement("li")
+            listitems.innerHTML = "ITEM" + i
+            document.querySelector("ul").appendChild(listitems)
+        }
+
+
+        // Remove Elements
+        // var listitems = document.querySelectorAll("li");
+        // for (i=0; i < listitems.length ; i++) {
+        //     listitems[i].setAttribute ("class", "success")
+        //     listitems[i].style.margin = '2px'
+        //     listitems[i].addEventListener("click", function() {
+        //            console.log(this)
+        //            this.remove()
+        //     })
+        //             }
         
  
 
