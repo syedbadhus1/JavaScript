@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .success {
+                color: blue;
+                background-color: green;
+                font-size: 35px;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,8 +40,11 @@
         // 4. Add or Remove Elements
         var listitems = document.querySelectorAll("li");
         for (i=0; i < listitems.length ; i++) {
+            listitems[i].setAttribute ("class", "success")
+            listitems[i].style.margin = '2px'
             listitems[i].addEventListener("click", function() {
                    console.log(this)
+                   this.remove()
             })
                     }
         
