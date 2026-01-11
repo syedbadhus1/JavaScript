@@ -23,7 +23,9 @@
         <li>Item 3</li> -->
     <!-- </ul> -->
 
-    <ul></ul>
+    <ul>
+
+    </ul>
 
     <script>
 
@@ -42,16 +44,15 @@
         // 4. Add or Remove Elements
 
         // Add Elements
-        var userinput = prompt("Enter the no of items:")
-        console.log(userinput)
-        for(i=0; i < userinput; i++){
-            var listitems = document.createElement("li")
-            listitems.innerHTML = "ITEM" + i
-            document.querySelector("ul").appendChild(listitems)
-        }
+        // var userinput = prompt("Enter the no of items:")
+        // console.log(userinput)
+        // for(i=0; i < userinput; i++){
+        //     var listitems = document.createElement("li")
+        //     listitems.innerHTML = "ITEM" + i
+        //     document.querySelector("ul").appendChild(listitems)
+        //                 }
 
-
-        // Remove Elements
+        // // Remove Elements
         // var listitems = document.querySelectorAll("li");
         // for (i=0; i < listitems.length ; i++) {
         //     listitems[i].setAttribute ("class", "success")
@@ -61,10 +62,16 @@
         //            this.remove()
         //     })
         //             }
+
+
+         var total = prompt("enter value:")
+                    for (i=0; i < total; i++)  {
+            var lists = document.createElement("li")
+            lists.innerHTML = "stock" + i
+            document.querySelector("ul").appendChild(lists)
+           }       
+                   
         
- 
-
-
     </script>
 
 
