@@ -30,8 +30,14 @@ const people = [
   ];
 
 for (i=0; i < people.length; i++){
-    console.log(i)
-
+    var myTR = document.createElement('tr');
+    var user = people[i]
+     for (a in user){
+        var myTD = document.createElement('td')
+        myTD.innerHTML = user[a]
+        myTR.appendChild(myTD)
+    }
+document.querySelector('tbody').appendChild(myTR)
 }
 </script>
 </body>
