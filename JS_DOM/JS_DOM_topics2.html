@@ -18,21 +18,27 @@
 
     <script>
 
-        // 1. Change the HTML content
-        document.querySelector("h2").innerHTML = "Changed the heading"
+        // // 1. Change the HTML content
+        // document.querySelector("h2").innerHTML = "Changed the heading"
 
-        // 2. Change the CSS property
-        document.querySelector("h2").style.color = "red"
+        // // 2. Change the CSS property
+        // document.querySelector("h2").style.color = "red"
 
-        // 3. Adding Attributes
-        document.querySelector("h2").setAttribute("onclick", "colorhandle()")
-        function colorhandle (){
-            document.querySelector("h2").style.color = "green"
-        }
+        // // 3. Adding Attributes
+        // document.querySelector("h2").setAttribute("onclick", "colorhandle()")
+        // function colorhandle (){
+        //     document.querySelector("h2").style.color = "green"
+        // }
 
         // 4. Add or Remove Elements
- 
+        var listitems = document.querySelectorAll("li");
+        for (i=0; i < listitems.length ; i++) {
+            listitems[i].addEventListener("click", function() {
+                   console.log(this)
+            })
+                    }
         
+ 
 
 
     </script>
