@@ -1,32 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #Editform {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <table>
+    <button onclick="createuser()">Create User</button>
+    <table border="" , style="width: 100%;">
         <thead>
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>city</th>
+                <th>country</th>
+                <th>Delete</th>
+                <th>Edit</th>
             </tr>
-
         </thead>
         <tbody>
 
         </tbody>
-
     </table>
 
+    <hr>
+    <form id="Editform">
+        <label for="">firstname</label>
+        <input type="text" name="" id="firstname"><br>
+        <label for="">lastname</label>
+        <input type="text" name="" id="lastname"><br>
+        <label for="">city</label>
+        <input type="text" name="" id="city"><br>
+        <label for="">country</label>
+        <input type="text" name="" id="country"><br>
+        <button type="button" onclick=updateuser() id="updatebutton">Update User</button>
+        <button type="button" onclick=createuserbtn() id="createuserbutton">Create User</button>
+    </form>
+
     <script>
+        const people = [
+            { firstname: "John", lastname: "Doe", city: "New York", country: "USA" },
+            { firstname: "Maria", lastname: "Garcia", city: "Madrid", country: "Spain" },
+            { firstname: "Liam", lastname: "Smith", city: "London", country: "UK" },
+            { firstname: "Aisha", lastname: "Khan", city: "Lahore", country: "Pakistan" },
+        ];
+ 
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = "";
+            for (i = 0; i < people.length; i++) {
+                var myTR = document.createElement('tr');
+                var user = people[i]
+
+                for (a in user) {
+                    var myTD = document.createElement('td')
+                    myTD.innerHTML = user[a]
+                    myTR.appendChild(myTD)
+                }
+
+                // Add Delete Button:
+                var deletetd = document.createElement('td')
+                var deletebtn = document.createElement("button")
+                deletebtn.setAttribute("onclick", "handledelete(" + i + ")")
+                deletebtn.innerHTML = "DELETE"
+                deletetd.appendChild(deletebtn)
+                myTR.appendChild(deletetd)
+
+
+                // Add Edit Button:
+                var Edittd = document.createElement('td')
+                var editbtn = document.createElement("button")
+                editbtn.setAttribute("onclick", "edithandle(" + i + ")")
+                editbtn.innerHTML = "EDIT"
+                Edittd.appendChild(editbtn)
+                myTR.appendChild(Edittd)
+
+                document.querySelector("tbody").appendChild(myTR)
+            }
+        }
+        displayUsers()
+
+        function handledelete(i) {
+            console.log(i)
+            people.splice(i, 1)
+            displayUsers()
+        }
+
+        var editindex;
+        function edithandle(i) {
+            editindex = i
+            document.getElementById("Editform").style.display = "block";
+            document.getElementById("createuserbutton").style.display = "none"
+            document.getElementById("updatebutton").style.display = "block"
+            
+            var user = people[i];
+            for (a in user) {
+                document.getElementById(a).value = user[a]
+            }
+        };
+        function updateuser() {
+            var user = {
+                firstname: "",
+                lastname: "",
+                city: "",
+                country: ""
+            }
+            for (a in user) {
+                user[a] = document.getElementById(a).value
+            }
+            people[editindex] = user;
+            displayUsers();
+            document.getElementById("Editform").style.display = "none"
+        }
+
+
+        function createuserbtn() {
+            document.getElementById("Editform").style.display = "block"
+            document.getElementById("updatebutton").style.display = "none"
+            document.getElementById("createuserbutton").style.display = "block"
+
+        }
+
 
     </script>
 
 
 </body>
+
 </html>
